@@ -1,0 +1,1338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.max-w850 {
+    max-width: 850px;
+}
+
+:root {
+    --yellow: #FFA500;
+}
+
+.hover-img:hover {
+    opacity: 0.9 !important;
+}
+
+.header input[type = "checkbox"] {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.open {
+    display: flex !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.text-bolder {
+    font-weight: bolder !important;
+}
+
+.text-opacity {
+    opacity: 0.6 !important;
+}
+
+.header.js-header {
+    position: fixed;
+    border: 1px solid red;
+    width: 99.8%;
+    top: 0px;
+    z-index: 1;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .navigation {
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+
+.navigation .logo a {
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    display: block;
+}
+
+.navigation .content > ul {
+    display: flex;
+    background-color: #222;
+    width: 100%;
+    align-items: center;
+}
+
+.navigation ul li {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+.navigation .content {
+    display: flex;
+    position: relative;
+}
+
+.navigation .navi-child {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+    background-color: #222;
+    animation: move ease 0.5s;
+    border-radius: 6px;
+    min-width: 160px;
+}
+
+@keyframes move {
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        top: 100%;
+    }
+}
+
+.navigation .navi-child li a {
+    display: inline-block;
+    width: 128px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;    
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 8px 16px;
+}
+
+.navigation ul li a {
+    /* border: 1px solid red; */
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;    
+    color: #fff;
+    border-radius: 6px;
+}
+
+.navigation .content > ul > li:hover > a,
+.navigation .navi-child li a:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.navigation li:last-child:hover .navi-child {
+    display: block;
+}
+/* ------------------------- */
+
+/* .navigation li:last-child > a > i{
+    transition: all 0.4s ease;
+} */
+.navigation li:last-child:hover > a > i{
+    transform: rotate(180deg);
+    transition: all 0.4s ease;
+}
+
+/* -------------------------- */
+.header .bars {
+    padding: 12px 23px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+.header .search {
+    width: 60%;
+    position: absolute;
+    right: 0%;
+    height:100%;
+    z-index: 0;
+}
+
+.header .search .fas {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.header input{
+    display: none;
+}
+
+.header input:first-child:checked ~ 
+.search  button,  
+.header input:first-child:checked ~ 
+.search input{
+    display: block;
+    pointer-events: auto;
+}
+
+.header input:first-child:checked ~ label i::before {
+    content: "\f00d";
+    display: block;
+    width: 15px;
+}
+
+.header .search input {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20%;
+    border: none;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;    
+    padding: 5px;
+    width: 45%;
+    display: none;
+    background-color: #000;
+    outline: none;
+    animation: input ease 0.4s;
+}
+
+.header .search input::placeholder {
+    color: #ccc;
+}
+
+@keyframes input {
+    from {
+        opacity: 0;
+        right: -50%;
+    }
+
+    to {
+        opacity: 1;
+        right: 20%;
+    }
+}
+
+.header > label {
+    position: absolute;
+    right: 1%;
+    top: 10%;
+    padding: 12px 15px;
+    color: #fff;
+    z-index: 1;
+}
+
+.header > label:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.search button {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: #357AE8;
+    padding: 2px 16px;
+    display: none;
+}
+
+.search button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* .slider-contain .slider:first-child {
+    background-image: url('/assets/slider/chicago.jpg');
+    padding-top: 50%;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-top: 46px;
+    background-size: contain;
+    position: relative;
+}
+
+.slider-contain .slider:nth-child(2) {
+    background-image: url('/assets/slider/ny.jpg');
+    padding-top: 50%;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-top: 46px;
+    background-size: contain;
+    position: relative;
+}
+
+.slider-contain .slider:last-child {
+    background-image: url('/assets/slider/la.jpg');
+    padding-top: 50%;
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-top: 46px;
+    background-size: contain;
+    position: relative;
+} */
+
+.slider-contain .slider {
+    position: relative;
+}
+
+.slider-contain .slider > img {
+    width: 100%;
+    margin-top: 46px;
+}
+
+.slider-contain .slider .text-slider img {
+    width: 38vw;
+    display: block;
+    flex-basis: 40%;
+    filter: drop-shadow(7px 7px 7px black);
+}
+
+.slider-contain .slider .text-slider {
+    position: absolute;
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+    bottom: 40%;
+    transform: translateY(50%);
+    /* left: 50%;
+    transform: translateX(-50%); */
+}
+
+.slider-contain .slider .text-slider p {
+    font-family: din-2014,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",din-2014,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    text-align: justify;
+    flex-basis: 
+    40%;
+}
+
+.slider-contain .slider .text-slider p {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin: 15px 0px;
+    font-weight: bolder;
+}
+
+.back-img {
+    background-image: url(/assets/images/1920-33.png);
+    background-attachment: fixed;
+}
+
+.all-content {
+    max-width: 800px;
+    padding: 64px 16px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    margin-top: -10px;
+}
+
+.all-content > p:first-child,
+.all-content .title p {
+    font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+    font-weight: 400;
+    margin: 10px 0px;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-align: center;
+    color: #ccc;
+}
+
+.all-content > p:nth-child(2) {
+    margin: 15px 0px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;    
+    text-align: justify;
+    color: #000;
+    line-height: 1.5;
+    word-spacing: -1px;
+    color: #ccc;
+}
+
+
+.list-member {
+    padding: 32px 0px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.list-member .member {
+    width: 50%;
+}
+
+.list-member .member img{
+    width: 95%;
+    height: 76%;
+}
+
+.list-member .member p {
+    color: #ccc;
+    font-weight: bolder;
+    margin: 15px 0px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Từ dòng 393 đến  484 là phần css cho tourlist*/
+
+.backgr-black {
+    background-color: #171c24;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.all-content .tour-list {
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.all-content .tour-list ul li {
+    list-style: none;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.all-content .tour-list ul li:first-child span,
+.all-content .tour-list ul li:nth-child(2) span {
+    background-color: #F44336;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;    
+    color: #fff;
+    padding: 2px 8px;
+    margin-left: 16px;
+}
+
+.all-content .tour-list li:last-child span {
+    position: absolute;
+    right: 40px;
+    background-color: #000;
+    color: #fff;
+    padding: 0px 8px;
+    border-radius: 50%;
+}
+
+.list-place {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0px;
+}
+
+.list-place .place {
+    width: 32%;
+} 
+
+.list-place .place img {
+    width: 100%;
+    display: block;
+}
+
+.list-place .place img:hover {
+    opacity: 0.6;
+}
+
+.place .place-text{
+    color: #171c24;
+    background-color: #fff;
+    padding: 0px 16px;
+}
+
+.place .place-text p{
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;    
+    padding: 15px 0px 0px;
+}
+
+.place .place-text button {
+    color: #fff;
+    background-color: #171c24;
+    padding: 8px 16px;
+    border: none;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 15px 0px;
+}
+
+.place .place-text button:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#match {
+    display: none;
+}
+
+.backgr-black {
+    background-color: #0a0e13;
+    color: #fff;
+}
+
+.all-content .match {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Colfax',Helvetica,sans-serif;
+}
+
+.all-content .title {
+    margin-bottom: 20px;
+}
+
+.all-content .match p:last-child span {
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.match .detail .team2, 
+.match .detail .team1,
+.all-content .match .detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.match .detail .team2, 
+.match .detail .team1 {
+    width: 47%;
+}
+
+.match .detail .team1 h2{
+    margin-right: 12px;
+}
+
+.match .detail .team2 h2 {
+    margin-left: 12px;
+}
+
+.detail img {
+    width: 26%;
+}
+
+.match p:first-child {
+    width: 20%;
+    color: #8fa3b0;
+
+}
+.match p:last-child {
+    width: 12%;
+    color: #8fa3b0;
+}
+
+.match .detail {
+    width: 68%;
+    justify-content: space-evenly;
+}
+
+
+.all-content .title {
+    display: flex;
+    justify-content: center;
+}
+
+.all-content .title img {
+    width: 10%;
+    display: block;
+    margin-right: 24px;
+}
+
+.uniform > img{
+    width: 100%;
+}
+
+.uniform h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+    margin: 50px 0px 15px;
+}
+
+.uniform .bar {
+    margin: 20px auto 15px;
+    height: 2px;
+    width: 35px;
+    display: block;
+    background: #111;
+}
+
+.uniform p:nth-child(4){
+    margin: 15px 0px;
+    text-align: center;
+    display: block;
+    color: #aaa;
+    font-weight: 300;
+    padding: 5px 0 0;
+    font-size: 14px;
+    letter-spacing: -0.03em;
+    font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+}
+
+.list-uniform-1 {
+    display: flex;
+    justify-content: space-around;
+}
+.list-uniform-1 .uniform-member {
+    width: 24%;
+}
+
+.list-uniform-1 .uniform-member img,
+.list-uniform-2 .uniform-member img {
+    width: 100%;
+}
+
+.list-uniform-1 .uniform-member p,
+.list-uniform-2 .uniform-member p {
+    text-align: center;
+    font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+    margin-top: 15px;
+    font-weight: lighter;
+}
+
+.list-uniform-2 {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.list-uniform-2 .uniform-member {
+    width: 25%;
+}
+
+.custom {
+    padding: 30px 0px;
+}
+
+.custom p:first-child {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 25px 0px;
+    font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+
+}
+
+.custom .team {
+    display: flex;
+    margin-top: 40px;
+}
+.custom .team a {
+    background: #c63939;
+    border-radius: 60px;
+    color: #fff;
+    margin: 40px 0 0;
+    height: 44px;
+    line-height: 1.1;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    padding: 12px 35px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+
+}
+.custom .team a:hover {
+    opacity: 0.9;
+}
+.custom .text {
+    padding: 50px;
+}
+.custom .text h3 {
+    font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+    font-size: 24px;
+    line-height: 1.8;
+}
+
+.custom .text p {
+    font-family: 'Montserrat','Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움','AppleGothic','Apple SD Gothic Neo',sans-serif;
+    color: #111;
+    font-size: 17px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+#contact {
+    max-width: 900px !important;
+}
+
+.loca-form {
+    display: flex;
+    padding: 32px 0px;
+    justify-content: space-evenly;
+}
+
+.loca-form .location {
+    width: 40%;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.loca-form .location iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.loca-form .location i {
+    width: 30px;
+    margin-bottom: 10px;
+}
+
+.loca-form .form {
+    width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.loca-form .form .half {
+    display: flex;
+    flex-direction: column;
+}
+
+.loca-form .form i {
+    width: 25px;
+}
+
+.loca-form .form p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.form .text,
+.form .email {
+    width: 95%;
+    margin-bottom: 15px;
+}
+
+.form .message {
+    width: 95%;
+}
+
+.loca-form .form button {
+    color: #fff;
+    background-color: #c63939;
+    padding: 8px 16px;
+    border: none;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin: 30px auto;
+    border-radius: 60px;    
+}
+
+.loca-form .form button:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.map {
+    background-image: url(/assets/images/z3127773724675_b3d5f04ad84a82fdbe9ebfe2d012629c.jpg);
+    margin-bottom: -5px;
+    background-repeat: no-repeat;
+    height: 300px;
+    background-size: cover;
+}
+
+.map img {
+    width: 100%;
+    /* filter: grayscale(50%); */
+}
+
+
+
+.footer {
+    padding: 28px 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.group-image {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.group-image img {
+    width: 137px;
+    display: block;
+}
+
+.group-image img:hover {
+    opacity: 0.7;
+}
+
+
+.footer .contact {
+    margin-left: 24px;
+}
+
+.footer .contact a {
+    font-size: 23px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.footer .contact p a {
+    font-size: 16px;
+}
+
+.footer .contact a:hover {
+    opacity: 0.7;
+} 
+
+.footer .contact p {
+    margin: 15px 0px;
+    font-family: 'Poppins', sans-serif;    
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer .rating {
+    position: relative;
+    top: -22px;
+}
+
+.footer .rating p {
+    font-size: 18px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;    
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.footer .contact p a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.footer .contact-rate {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-around;
+}
+
+/* Nằm trong phần này là phần sao đánh giá */
+.footer .rating-star {
+    display: flex;
+    position: absolute;
+    flex-direction: row-reverse;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rating-star input {
+    position: relative;
+    width: 20px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.rating-star input::before {
+    content: '\eeb8';
+    position: absolute;
+    font-family: boxicons;
+    font-size: 34px;
+    position: absolute;
+    left: 4px;
+    color: #d4d4d4;
+    transition: all .3s;
+}
+
+.rating-star input:nth-child(2n + 1)::before {
+    right: 4px;
+    left: initial;
+}
+
+.rating-star input:hover ~ input::before,
+.rating-star input:hover::before,
+.rating-star input:checked ~ input::before,
+.rating-star input:checked::before {
+    color: var(--yellow);
+}
+
+/* hết */
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.modal-container {
+    max-width: calc(100% - 16px);
+    width: 900px;
+    animation: mykey ease 0.4s;
+    overflow: hidden;
+}
+
+@keyframes mykey {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-container .content {
+    background-color: #fff;
+    padding: 0px 16px;
+}
+
+.modal-container .content label {
+    display: block;
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-container .content input {
+    margin-top: 15px;
+    padding: 8px;
+    width: 98%;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;    
+    border: 1px solid #ccc;
+}
+
+.modal-container .content button {
+    margin: 16px 0px;
+    padding: 16px;
+    color: #fff;
+    background-color: #2F4F4F;
+    width: 100%;
+    border: none;
+    line-height: 22px;
+}
+
+.modal-container .content button:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+.modal-container .header {
+    color: #fff;
+    background-color: #2F4F4F;
+    padding: 32px 16px;
+    position: relative;
+}
+
+.modal-container .header h2 {
+    color: #fff;
+    font-size: 30px;
+    margin: 10px 0px;
+    letter-spacing: 4px;
+    text-transform:capitalize;
+    text-align: center;
+    font-weight: normal;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.modal-container .header > i {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    padding: 8px 16px;
+    height: 36px;
+    width: 14px;
+    font-size: 16px;
+    line-height: 36px;
+}
+
+.modal-container .header > i:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.modal-container .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.modal-footer button {
+    color: #fff;
+    background-color: #f44336;
+    padding: 8px 16px;
+    border: none;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+.modal-footer button:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+.modal-footer p {
+    margin: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-footer p a {
+    color: #2196F3;
+}
+
+@media screen and (min-width: 740px) and (max-width: 1025px) 
+and (min-height: 415px){
+    .header .search input {
+        right: 28%;
+        width: 55%;
+        animation: input ease 0.4s;
+    }
+
+    @keyframes input {
+        from {
+            opacity: 0;
+            right: -50%;
+        }
+        to {
+            opacity: 1;
+            right: 28%;
+        }
+    }
+    .header .search button {
+        right: 13%;
+    }
+    .header .search label {
+        right: 0%;
+    }
+    .header input:first-child:checked + .navigation {
+       visibility: hidden;
+    }
+    .content {
+        overflow: hidden;
+    }
+    .all-content {
+        width: 768px;
+    }
+    .tour-list {
+        width: 736px;
+    }
+    .modal-container {
+        width: 500px;
+    }
+    .modal-container .header {
+        width: 93.5%;
+    }
+
+    .modal-container .header i {
+        right: 0px;
+    }
+
+    .modal-container {
+        transform: translateY(-20%);
+        animation: setup ease 0.4s;
+    }
+
+    @keyframes setup {
+        from {
+            opacity: 0;
+            transform: translateY(-200%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(-20%);
+        }
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 813px)
+and (max-height: 415px) {
+    .modal-container {
+        width: 500px;
+        transform: translateY(15%);
+        animation: setup ease 0.4s;  
+    }
+    .modal {
+        overflow: scroll;
+    }
+
+    @keyframes setup {
+        from {
+            opacity: 0;
+            transform: translateY(-200%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(15%);
+        }
+    }
+}
+
+/* @media only screen and (max-width: 739px) {  //trên điện thoại nhưng xoay ngang bị lỗi
+    .header {
+        height: 46px;
+        overflow: hidden;
+    }
+    .header .search {
+        display: none;
+    }
+    .header .bars {
+        display: block;
+        color: #fff;
+    }
+    .header .bars:hover {
+        color: #000 !important;
+        background-color: #ccc;
+    }
+    .navigation ul li:first-child {
+        width: 25%;
+    }
+    .navigation ul li,
+    .navigation ul li a {
+        display: block;
+    }
+    .text-slider {
+        display: none;
+    }
+    .list-member {
+        display: block;
+    }
+    .list-member .member {
+        width: 100%;
+    }
+    .list-place {
+        display: block;
+    }
+
+    .place .place-text button {
+        width: 100%;
+    }
+
+    .list-place .place {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .loca-form {
+        display: block;
+
+    }
+    .loca-form .location,
+    .loca-form .form {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .loca-form .form .text,
+    .loca-form .form .email {
+        width: 95%;
+    }
+    .all-content .form button {
+        width: 100%;
+    } 
+
+    .modal-container .header h2 {
+        width: 90%;
+    }
+
+} */
+
+/*Phần này là tự chế*/
+@media only screen and (max-width: 415px){
+    .header .navigation {
+        width: 99%;
+    }
+    .header.js-header {
+        min-height: 70px;
+    }
+    .header .bars {
+        display: inline-block;
+        width: 5%;
+    }
+
+    .header label {
+        top: 20%;
+    }
+
+    .navigation .content {
+        flex-direction: column;
+        left: 50%;
+    transform: translateX(-80%);
+    }
+
+    .navigation .content .logo{
+        margin-left: 20px;
+    }
+
+    .navigation .content >  ul {
+        flex-direction: column;
+        position: absolute;
+        top: 110%;
+        left: -32%;
+        height: 100vh;
+        width: 154%;
+        border-top: 1px solid red;
+        border-right: 1px solid red;
+        display: none;
+        animation: setup ease 0.4s;
+    }
+
+    @keyframes setup {
+        from {
+            opacity: 0;
+            left: -120%;
+        }
+        to {
+            opacity: 1;
+            left: -32%;
+        }
+    }
+
+    .navigation .content ul li {
+        margin: 15px 20px;
+    }
+
+    .navigation .content > ul > li > a {
+        padding: 16px 28px;
+        font-size: 20px;
+        display: block;
+    }
+
+    .content > ul li:last-child .navi-child li a {
+        width: 95%;
+    }
+
+    .navigation input:nth-child(2):checked ~ .content > ul {
+        display: block;
+    }
+
+    .content .slider-contain {
+        margin-top: 24px;
+    }
+    .text-slider {
+        display: none;
+    }
+    .list-member {
+        display: block;
+    }
+    .list-member .member {
+        width: 100%;
+    }
+    .list-place {
+        display: block;
+    }
+
+    .place .place-text button {
+        width: 100%;
+    }
+
+    .list-place .place {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .loca-form, .loca-form .form .half {
+        display: block;
+
+    }
+    .loca-form .location,
+    .loca-form .form {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .loca-form .form .text,
+    .loca-form .form .email {
+        width: 95%;
+    }
+    .all-content .form button {
+        width: 100%;
+    } 
+
+    .modal-container .header h2 {
+        width: 90%;
+    }
+    .modal-container .header h2 {
+        margin-left: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+    .footer .contact {
+        margin-top: 20%;
+    }
+}
+
+
+
+
