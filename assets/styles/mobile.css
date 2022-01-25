@@ -1,0 +1,148 @@
+/*Phần này là tự chế*/
+@media only screen and (max-width: 415px){  /*Xoay doc*/
+    .header .navigation {
+        width: 99%;
+    }
+    .header.js-header {
+        min-height: 70px;
+    }
+    .header .bars {
+        display: inline-block;
+        width: 5%;
+    }
+
+    .header label {
+        top: 20%;
+    }
+
+    .navigation .content {
+        flex-direction: column;
+        left: 50%;
+    transform: translateX(-80%);
+    }
+
+    .navigation .content .logo{
+        margin-left: 20px;
+    }
+
+    .navigation .content >  ul {
+        flex-direction: column;
+        position: absolute;
+        top: 110%;
+        left: -32%;
+        height: 100vh;
+        width: 154%;
+        border-top: 1px solid red;
+        border-right: 1px solid red;
+        display: none;
+        animation: setup ease 0.4s;
+    }
+
+    @keyframes setup {
+        from {
+            opacity: 0;
+            left: -120%;
+        }
+        to {
+            opacity: 1;
+            left: -32%;
+        }
+    }
+
+    .navigation .content ul li {
+        margin: 15px 20px;
+    }
+
+    .navigation .content > ul > li > a {
+        padding: 16px 28px;
+        font-size: 20px;
+        display: block;
+    }
+
+    .content > ul li:last-child .navi-child li a {
+        width: 95%;
+    }
+
+    .navigation input:nth-child(2):checked ~ .content > ul {
+        display: block;
+    }
+
+    .content .slider-contain {
+        margin-top: 24px;
+    }
+    .text-slider {
+        display: none;
+    }
+    .list-member {
+        display: block;
+    }
+    .list-member .member {
+        width: 100%;
+    }
+    .list-place {
+        display: block;
+    }
+
+    .place .place-text button {
+        width: 100%;
+    }
+
+    .list-place .place {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .loca-form, .loca-form .form .half {
+        display: block;
+
+    }
+    .loca-form .location,
+    .loca-form .form {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .loca-form .form .text,
+    .loca-form .form .email {
+        width: 95%;
+    }
+    .all-content .form button {
+        width: 100%;
+    } 
+
+    .modal-container .header h2 {
+        width: 90%;
+    }
+    .modal-container .header h2 {
+        margin-left: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+    .footer .contact {
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 813px) /*Xoay ngang*/
+and (max-height: 415px) {
+    .modal-container {
+        width: 500px;
+        transform: translateY(15%);
+        animation: setup ease 0.4s;  
+    }
+    .modal {
+        overflow: scroll;
+    }
+
+    @keyframes setup {
+        from {
+            opacity: 0;
+            transform: translateY(-200%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(15%);
+        }
+    }
+}

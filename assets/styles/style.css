@@ -211,7 +211,7 @@ html {
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;    
     padding: 5px;
-    width: 45%;
+    width: 35%;
     display: none;
     background-color: #000;
     outline: none;
@@ -609,11 +609,18 @@ html {
 }
 .list-uniform-1 .uniform-member {
     width: 24%;
+    overflow: hidden;
 }
 
 .list-uniform-1 .uniform-member img,
 .list-uniform-2 .uniform-member img {
     width: 100%;
+    transition: all 0.5s ease;
+}
+
+.list-uniform-1 .uniform-member img:hover,
+.list-uniform-2 .uniform-member img:hover {
+    transform: scale(1.5);
 }
 
 .list-uniform-1 .uniform-member p,
@@ -743,14 +750,26 @@ html {
     line-height: 1.5;
 }
 
-.form .text,
-.form .email {
-    width: 95%;
+.form .get {
     margin-bottom: 15px;
 }
 
+.form .text,
+.form .email,
 .form .message {
     width: 95%;
+    border: none;
+    outline: none;
+}
+
+.form form .get i {
+    margin-left: 15px;
+}
+
+.form form .get {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
 }
 
 .loca-form .form button {
@@ -813,11 +832,17 @@ html {
 
 .footer .contact {
     margin-left: 24px;
+    width: 40%;
 }
 
-.footer .contact a {
-    font-size: 23px;
+.footer .contact .child-contact a {
+    width: 20%;
+    font-size: 25px;
+    line-height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
     color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .footer .contact p a {
@@ -827,6 +852,10 @@ html {
 .footer .contact a:hover {
     opacity: 0.7;
 } 
+
+.footer .child-contact {
+    display: flex;
+}
 
 .footer .contact p {
     margin: 15px 0px;
@@ -1050,287 +1079,6 @@ html {
 
 .modal-footer p a {
     color: #2196F3;
-}
-
-@media screen and (min-width: 740px) and (max-width: 1025px) 
-and (min-height: 415px){
-    .header .search input {
-        right: 28%;
-        width: 55%;
-        animation: input ease 0.4s;
-    }
-
-    @keyframes input {
-        from {
-            opacity: 0;
-            right: -50%;
-        }
-        to {
-            opacity: 1;
-            right: 28%;
-        }
-    }
-    .header .search button {
-        right: 13%;
-    }
-    .header .search label {
-        right: 0%;
-    }
-    .header input:first-child:checked + .navigation {
-       visibility: hidden;
-    }
-    .content {
-        overflow: hidden;
-    }
-    .all-content {
-        width: 768px;
-    }
-    .tour-list {
-        width: 736px;
-    }
-    .modal-container {
-        width: 500px;
-    }
-    .modal-container .header {
-        width: 93.5%;
-    }
-
-    .modal-container .header i {
-        right: 0px;
-    }
-
-    .modal-container {
-        transform: translateY(-20%);
-        animation: setup ease 0.4s;
-    }
-
-    @keyframes setup {
-        from {
-            opacity: 0;
-            transform: translateY(-200%);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(-20%);
-        }
-    }
-}
-
-@media only screen and (min-width: 416px) and (max-width: 813px)
-and (max-height: 415px) {
-    .modal-container {
-        width: 500px;
-        transform: translateY(15%);
-        animation: setup ease 0.4s;  
-    }
-    .modal {
-        overflow: scroll;
-    }
-
-    @keyframes setup {
-        from {
-            opacity: 0;
-            transform: translateY(-200%);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(15%);
-        }
-    }
-}
-
-/* @media only screen and (max-width: 739px) {  //trên điện thoại nhưng xoay ngang bị lỗi
-    .header {
-        height: 46px;
-        overflow: hidden;
-    }
-    .header .search {
-        display: none;
-    }
-    .header .bars {
-        display: block;
-        color: #fff;
-    }
-    .header .bars:hover {
-        color: #000 !important;
-        background-color: #ccc;
-    }
-    .navigation ul li:first-child {
-        width: 25%;
-    }
-    .navigation ul li,
-    .navigation ul li a {
-        display: block;
-    }
-    .text-slider {
-        display: none;
-    }
-    .list-member {
-        display: block;
-    }
-    .list-member .member {
-        width: 100%;
-    }
-    .list-place {
-        display: block;
-    }
-
-    .place .place-text button {
-        width: 100%;
-    }
-
-    .list-place .place {
-        width: 100%;
-        margin-bottom: 16px;
-    }
-    .loca-form {
-        display: block;
-
-    }
-    .loca-form .location,
-    .loca-form .form {
-        width: 100%;
-        margin-bottom: 16px;
-    }
-    .loca-form .form .text,
-    .loca-form .form .email {
-        width: 95%;
-    }
-    .all-content .form button {
-        width: 100%;
-    } 
-
-    .modal-container .header h2 {
-        width: 90%;
-    }
-
-} */
-
-/*Phần này là tự chế*/
-@media only screen and (max-width: 415px){
-    .header .navigation {
-        width: 99%;
-    }
-    .header.js-header {
-        min-height: 70px;
-    }
-    .header .bars {
-        display: inline-block;
-        width: 5%;
-    }
-
-    .header label {
-        top: 20%;
-    }
-
-    .navigation .content {
-        flex-direction: column;
-        left: 50%;
-    transform: translateX(-80%);
-    }
-
-    .navigation .content .logo{
-        margin-left: 20px;
-    }
-
-    .navigation .content >  ul {
-        flex-direction: column;
-        position: absolute;
-        top: 110%;
-        left: -32%;
-        height: 100vh;
-        width: 154%;
-        border-top: 1px solid red;
-        border-right: 1px solid red;
-        display: none;
-        animation: setup ease 0.4s;
-    }
-
-    @keyframes setup {
-        from {
-            opacity: 0;
-            left: -120%;
-        }
-        to {
-            opacity: 1;
-            left: -32%;
-        }
-    }
-
-    .navigation .content ul li {
-        margin: 15px 20px;
-    }
-
-    .navigation .content > ul > li > a {
-        padding: 16px 28px;
-        font-size: 20px;
-        display: block;
-    }
-
-    .content > ul li:last-child .navi-child li a {
-        width: 95%;
-    }
-
-    .navigation input:nth-child(2):checked ~ .content > ul {
-        display: block;
-    }
-
-    .content .slider-contain {
-        margin-top: 24px;
-    }
-    .text-slider {
-        display: none;
-    }
-    .list-member {
-        display: block;
-    }
-    .list-member .member {
-        width: 100%;
-    }
-    .list-place {
-        display: block;
-    }
-
-    .place .place-text button {
-        width: 100%;
-    }
-
-    .list-place .place {
-        width: 100%;
-        margin-bottom: 16px;
-    }
-    .loca-form, .loca-form .form .half {
-        display: block;
-
-    }
-    .loca-form .location,
-    .loca-form .form {
-        width: 100%;
-        margin-bottom: 16px;
-    }
-    .loca-form .form .text,
-    .loca-form .form .email {
-        width: 95%;
-    }
-    .all-content .form button {
-        width: 100%;
-    } 
-
-    .modal-container .header h2 {
-        width: 90%;
-    }
-    .modal-container .header h2 {
-        margin-left: 20px;
-    }
-
-    .footer {
-        flex-direction: column;
-    }
-    .footer .contact {
-        margin-top: 20%;
-    }
 }
 
 

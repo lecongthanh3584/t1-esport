@@ -1,0 +1,95 @@
+@media screen and (min-width: 740px) and (max-width: 1025px) 
+and (min-height: 415px){
+    .header .bars {
+        display: block;
+    }
+
+    .navigation .content {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .navigation .content > ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+    }
+
+    .header .search input {
+        right: 28%;
+        width: 55%;
+        animation: input ease 0.4s;
+    }
+
+    @keyframes input {
+        from {
+            opacity: 0;
+            right: -50%;
+        }
+        to {
+            opacity: 1;
+            right: 28%;
+        }
+    }
+    .header .search button {
+        right: 13%;
+    }
+    .header .search label {
+        right: 0%;
+    }
+    .header input:first-child:checked + .navigation {
+       visibility: hidden;
+    }
+
+    .slider-contain .slider .text-slider p {
+        font-size: 10px;
+    }
+
+
+    .content {
+        overflow: hidden;
+    }
+    .all-content {
+        width: 768px;
+    }
+    .tour-list {
+        width: 736px;
+    }
+    .modal-container {
+        width: 500px;
+    }
+    .modal-container .header {
+        width: 93.5%;
+    }
+
+    .modal-container .header i {
+        right: 0px;
+    }
+
+    .modal-container {
+        transform: translateY(-20%);
+        animation: setup ease 0.4s;
+    }
+
+    @keyframes setup {
+        from {
+            opacity: 0;
+            transform: translateY(-200%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(-20%);
+        }
+    }
+
+    .custom .team img {
+        width: 57%;
+    }
+
+    .footer .contact .child-contact a {
+        font-size: 18px;
+        line-height: 15px;
+    }
+}
+
