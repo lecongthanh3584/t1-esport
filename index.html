@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./assets/styles/tablet.css">
     <link rel="stylesheet" href="./assets/styles/mobile.css">
     <title>T1 Esport</title>
-    <!-- <script src="./main.js"></script> -->
-    <script src = "./wow.js"> </script>
+    <script src = "./Javascript/wow.js"> </script>
+    <!-- <script src="./Javascript/main.js"></script> -->
     <script>
         new WOW().init();
     </script>
@@ -285,22 +285,22 @@
         </div>
 
         <div id="uniform" class="uniform">
-            <img class="wow bounceInUp" src="https://en.shop-t1.gg/_dj/img/roll_e1.jpg" alt="">
+            <img class="wow bounceInUp" src="./assets/images/01_PC_KOR.jpg" alt="">
             <h1>New Release</h1>
             <p class="bar"></p>
             <p>Check out T1's new product</p>
             <div class="list-uniform-1 wow fadeInUp" data-wow-delay = "0.5s">
                 <div class="uniform-member">
-                    <img src="https://en.shop-t1.gg/web/product/medium/202201/4b21afdc7676bdc774e49389afef8ba3.jpg" alt="">
+                    <img src="./assets/images/zeus-uniform.jpg" alt="">
                     <p>2022 T1 Official Pants</p>
                 </div>
                 <div class="uniform-member">
-                    <img src="https://en.shop-t1.gg/web/product/medium/202201/c82c089400befe40d365a2b1b568f17d.png" alt="">
+                    <img src="./assets/images/faker-uniform.png" alt="">
                     <p>2022 T1 Official Jacket</p>
 
                 </div>
                 <div class="uniform-member">
-                    <img src="https://en.shop-t1.gg/web/product/medium/202201/e663460355545e22a9fc1d002b8e61a1.jpg" alt="">
+                    <img src="./assets/images/oner-uniform.jpg" alt="">
                     <p>2022 T1 Official Jersey</p>
 
                 </div>
@@ -335,10 +335,9 @@
             <p class="text-black">contact Us</p>
             <div class="loca-form">
                 <div class="location">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3162.3269171483685!2d126.9794344!3d37.5709189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca33003172e9f%3A0x921737779afed375!2sLoL%20Park!5e0!3m2!1sen!2s!4v1642903356758!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50647.51188526074!2d127.03283401060042!3d37.49684355607162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca4235fb589fb%3A0xb331971bc570bb6a!2zR2FuZ25hbS1ndSwgU2VvdWwsIEjDoG4gUXXhu5Fj!5e0!3m2!1svi!2s!4v1643188038411!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                </div>
                 <div class="form">
-                    <p><i class="fas fa-map-marker-alt"></i>LOL Park, South Korea</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Gangnam, Seoul, South Korea</p>
                     <p><i class="fas fa-envelope"></i>T1@gmail.com</p>
                     <form action="">
                         <div class="get">
@@ -400,9 +399,6 @@
                     <a href="https://www.facebook.com/Thanh.Kalley"  target="blank" title="Go to the wall Fb Cong Thanh" ><i class="fab fa-facebook-f"></i></a>
                     <a href="0327470664" title="Call 0327470664" target="blank" ><i class="fas fa-phone"></i></a>
                     <a href="thanh232002@gmail.com" target="blank" title="Email: thanh232002@gmail.com" ><i class="fas fa-envelope"></i></a>
-                    <a href="#pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#linked"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <p>Design by <a href="https://www.facebook.com/Thanh.Kalley">CongThanh</a></p>
             </div>
@@ -443,70 +439,7 @@
             </div>
         </div>
     </div>
-    <script>
-        const Buybtns = document.getElementsByClassName("js-open-buytickets")
-        const modal = document.querySelector(".js-modal")
-        const closes = document.querySelectorAll(".js-close")
-        const modal_container = document.querySelector(".js-modal-container")
-        function openmodal(){
-            // modal.classList.add("open")  //Cách 1
-            modal.style.display = 'flex';
-        }
-        function closemodal(){
-            // modal.classList.remove("open")  //Cách 1
-            modal.style.display = 'none'; //Cách 2
-        }
-        for(const Buybtn of Buybtns){
-            Buybtn.addEventListener('click', openmodal)
-        }
-        for(const close of closes) {
-            close.addEventListener('click', closemodal)
-        }
-        modal.addEventListener('click', closemodal)
-        modal_container.addEventListener('click', function(event){
-            event.stopPropagation()
-        })
 
-        var myIndex = 0;
-        carousel();
-        function carousel() {
-            const x = document.getElementsByClassName("js-slider");
-            for (let i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}    
-            x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 4000); 
-        }
-        new WOW (). init ();
-
-        var bars = document.querySelector(".js-bars");
-        // var check = header.clientHeight;
-        var check = document.getElementById("js-nav").style.display;
-        var links = document.querySelectorAll(".js-link");
-        var tests = document.getElementsByClassName("js-test");
-        // bars.onclick = function(){
-        //     // var bool = header.clientHeight === check;
-          
-        //     if(check === "block"){
-        //         document.getElementById("js-nav").style.display = 'none';
-        //     }else {
-        //         document.getElementById("js-nav").style.display = 'block';
-        //     }
-        // }
-        // for(var i = 0; i < links.length; i++){
-        //     links[i].onclick = function(){
-        //         document.getElementById("js-nav").style.display = "none"
-        //     }
-        // }
-        // for(var i = 0; i < tests.length; i++){
-        //     tests[i].onclick = function(){
-        //         alert("Mục này đang thử nghiệm vui lòng quay lại sau! ");
-        //         document.getElementById("js-nav").style.display = "none"
-        //     }
-        // }
-    </script>
-    
+    <script src="./Javascript/main.js"></script>
 </body>
 </html>
