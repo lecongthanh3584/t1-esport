@@ -20,7 +20,7 @@
     }
 
     .search button {
-        right: 20%;
+        right: 22%;
     }
 
     .header .search input {
@@ -100,6 +100,12 @@
 
     .all-content .match p:last-child span {
         margin-left: 5px;
+    }
+    .all-content .title p { 
+        font-size: 23px;
+    }
+    .all-content .title img {
+        width: 15%;
     }
 
     .match p:first-child {
