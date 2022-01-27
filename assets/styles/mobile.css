@@ -1,148 +1,181 @@
 /*Phần này là tự chế*/
-@media only screen and (max-width: 415px){  /*Xoay doc*/
-    .header .navigation {
-        width: 99%;
-    }
-    .header.js-header {
-        min-height: 70px;
-    }
+@media screen and (max-width: 415px){  /*Xoay doc*/
+
     .header .bars {
-        display: inline-block;
-        width: 5%;
+        display: block;
     }
 
-    .header label {
-        top: 20%;
+    .header > label {
+        position: unset;
+        line-height: 30px;
+    }
+
+    .header.js-header {
+        width: 99.5%;
+    }
+
+    .header input:first-child:checked ~ .navigation .content .logo, 
+    .header input:first-child:checked ~ .navigation label {
+        visibility: hidden;
+    }
+
+    .search button {
+        right: 20%;
+    }
+
+    .header .search input {
+        width: 100%;
+        right: 50%;
+        animation: input ease 0.4s;
+    }
+
+    @keyframes input {
+        from {
+            opacity: 0;
+            right: -30%;
+        }
+        to {
+            opacity: 1;
+            right: 50%;
+        }
     }
 
     .navigation .content {
         flex-direction: column;
-        left: 50%;
-    transform: translateX(-80%);
+        margin: 0 auto;
     }
-
-    .navigation .content .logo{
-        margin-left: 20px;
-    }
-
-    .navigation .content >  ul {
+    .navigation .content > ul {
+        display: none;
         flex-direction: column;
         position: absolute;
-        top: 110%;
-        left: -32%;
+        top: 101%;
         height: 100vh;
-        width: 154%;
-        border-top: 1px solid red;
-        border-right: 1px solid red;
-        display: none;
-        animation: setup ease 0.4s;
+        left: -30vw;
+        padding: 0px 20px 0px 52px;
+        animation: moving ease 0.4s;
     }
 
-    @keyframes setup {
+    @keyframes moving {
         from {
             opacity: 0;
-            left: -120%;
+            left: -100vw;
         }
         to {
             opacity: 1;
-            left: -32%;
+            left: -30vw;
         }
     }
-
-    .navigation .content ul li {
-        margin: 15px 20px;
+    .navigation .nav  > li {
+        width: 100%;
+        margin: 12px 0px;
     }
 
-    .navigation .content > ul > li > a {
-        padding: 16px 28px;
-        font-size: 20px;
+    .navigation ul li a {
         display: block;
     }
 
-    .content > ul li:last-child .navi-child li a {
-        width: 95%;
+    .navigation .navi-child {
+        left: 32px;
     }
 
-    .navigation input:nth-child(2):checked ~ .content > ul {
-        display: block;
+    .slider-contain .slider .text-slider img {
+        width: 100vw;
     }
 
-    .content .slider-contain {
-        margin-top: 24px;
-    }
-    .text-slider {
+    .slider-contain .slider .text-slider p {
         display: none;
     }
-    .list-member {
-        display: block;
+
+    .all-content .match .detail {
+        flex-direction: column;
     }
+
+    .all-content .match .detail p {
+        display: none;
+    }
+
+    .all-content .match:first-child {
+        margin-top: 40px;
+    }
+
+    .all-content .match p:last-child span {
+        margin-left: 5px;
+    }
+
+    .match p:first-child {
+        font-size: 20px;
+    }
+
+    .match .detail .team1 h2 {
+        font-size: 24px;
+        margin-left: 12px;
+        width: 50%;
+    }
+
+    .match .detail .team1 {
+        flex-direction: row-reverse;
+    }
+
+    .list-member {
+        flex-direction: column;
+    }
+
     .list-member .member {
         width: 100%;
     }
-    .list-place {
-        display: block;
+
+    .list-uniform-1,
+    .list-uniform-2 {
+        flex-direction: column;
     }
 
-    .place .place-text button {
+    .list-uniform-1 .uniform-member,
+    .list-uniform-2 .uniform-member {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0px 15px;
+        margin-bottom: 20px;
+    }
+    .loca-form {
+        flex-direction: column;
+    }
+    .loca-form .location iframe {
+        margin-bottom: 20px;
+    }
+    .loca-form .form,
+    .loca-form .location {
         width: 100%;
     }
 
-    .list-place .place {
-        width: 100%;
-        margin-bottom: 16px;
-    }
-    .loca-form, .loca-form .form .half {
-        display: block;
-
-    }
-    .loca-form .location,
-    .loca-form .form {
-        width: 100%;
-        margin-bottom: 16px;
-    }
-    .loca-form .form .text,
-    .loca-form .form .email {
-        width: 95%;
-    }
-    .all-content .form button {
-        width: 100%;
-    } 
-
-    .modal-container .header h2 {
-        width: 90%;
-    }
-    .modal-container .header h2 {
-        margin-left: 20px;
+    .custom .team {
+        flex-direction: column;
     }
 
+    .group-image {
+        margin-top: 20px;
+    }
+    .custom p:first-child {
+        font-size: 20px;
+    }
     .footer {
         flex-direction: column;
     }
     .footer .contact {
-        margin-top: 20%;
+        margin-top: 20px;
+        margin-left: 0px;
+        width: 100%;
+    }
+    .footer .child-contact {
+        width: 100%;
+        justify-content: center;
+    }
+    .footer .contact-rate {
+        flex-direction: column;
+        margin-top: 60px;
     }
 }
 
-@media only screen and (min-width: 416px) and (max-width: 813px) /*Xoay ngang*/
+@media screen and (min-width: 416px) and (max-width: 813px) /*Xoay ngang*/
 and (max-height: 415px) {
-    .modal-container {
-        width: 500px;
-        transform: translateY(15%);
-        animation: setup ease 0.4s;  
-    }
-    .modal {
-        overflow: scroll;
-    }
-
-    @keyframes setup {
-        from {
-            opacity: 0;
-            transform: translateY(-200%);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(15%);
-        }
-    }
+    
 }

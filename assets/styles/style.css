@@ -856,7 +856,7 @@ html {
 
 .footer .child-contact {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .footer .contact p {
