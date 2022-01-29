@@ -791,15 +791,11 @@ html {
 }
 
 .map {
-    background-image: url(/assets/images/z3127773724675_b3d5f04ad84a82fdbe9ebfe2d012629c.jpg);
-    margin-bottom: -5px;
-    background-repeat: no-repeat;
-    height: 300px;
-    background-size: cover;
+    overflow: hidden;
 }
 
 .map img {
-    width: 100%;
+    width: 130%;
     /* filter: grayscale(50%); */
 }
 

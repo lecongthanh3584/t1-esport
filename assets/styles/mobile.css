@@ -179,9 +179,153 @@
         flex-direction: column;
         margin-top: 60px;
     }
+    .map {
+        overflow: hidden;
+        margin-top: -10%;
+    }
+    
+    .map img {
+        width: 160%;
+    }
+    
 }
 
 @media screen and (min-width: 416px) and (max-width: 813px) /*Xoay ngang*/
 and (max-height: 415px) {
-    
+    .header .bars {
+        display: block;
+    }
+
+    .header > label {
+        position: unset;
+        line-height: 30px;
+    }
+
+    .header.js-header {
+        width: 99.75%;
+    }
+
+    .header input:first-child:checked ~ .navigation .content .logo, 
+    .header input:first-child:checked ~ .navigation label {
+        visibility: hidden;
+    }
+
+    .search button {
+        right: 12%;
+    }
+
+    .header .search input {
+        width: 80%;
+        right: 30%;
+        animation: input ease 0.4s;
+    }
+
+    @keyframes input {
+        from {
+            opacity: 0;
+            right: -30%;
+        }
+        to {
+            opacity: 1;
+            right: 30%;
+        }
+    }
+
+    .navigation .content {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .navigation .content > ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 101%;
+        height: 100vh;
+        left: -40vw;
+        padding: 0px 20px 0px 52px;
+        animation: moving ease 0.4s;
+    }
+
+    @keyframes moving {
+        from {
+            opacity: 0;
+            left: -100vw;
+        }
+        to {
+            opacity: 1;
+            left: -40vw;
+        }
+    }
+    .navigation .nav  > li {
+        width: 100%;
+        margin: 12px 0px;
+    }
+
+    .navigation ul li a {
+        display: block;
+    }
+
+    .navigation .navi-child {
+        left: 32px;
+    }
+
+    .slider-contain .slider .text-slider img {
+        width: 38vw;
+    }
+
+    .slider-contain .slider .text-slider p {
+        font-size: 11px;
+    }
+
+    .all-content .match:first-child {
+        margin-top: 40px;
+    }
+
+    .all-content .match p:last-child span {
+        margin-left: 5px;
+    }
+    .all-content .title p { 
+        font-size: 26px;
+    }
+    .all-content .title img {
+        width: 8%;
+    }
+
+    .match p:first-child {
+        font-size: 20px;
+    }
+
+    .list-member .member {
+        width: 50%;
+    }
+
+    .custom .team {
+        flex-direction: column;
+    }
+
+    .custom .text {
+        text-align: center;
+    }
+
+    .group-image {
+        margin-top: 20px;
+    }
+    .custom p:first-child {
+        font-size: 20px;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .footer .contact {
+        margin-top: 20px;
+        margin-left: 0px;
+        width: 32%;
+    }
+    .footer .child-contact {
+        width: 100%;
+        justify-content: center;
+    }
+    .footer .contact-rate {
+        margin-top: 10px;
+    }
 }

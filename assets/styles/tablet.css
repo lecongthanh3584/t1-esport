@@ -81,6 +81,15 @@ and (min-height: 415px) {
     .team img {
         width: 55%;
     }
+    .map {
+        overflow: hidden;
+    }
+    
+    .map img {
+        width: 150%;
+        /* filter: grayscale(50%); */
+    }
+    
 
 }
     
