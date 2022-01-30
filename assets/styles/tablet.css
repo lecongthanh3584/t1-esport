@@ -10,6 +10,9 @@ and (min-height: 415px) {
         position: unset;
         line-height: 30px;
     }
+    .header .search {
+        z-index: -1;
+    }
     .navigation .content {
         flex-direction: column;
         margin: 0 auto;
@@ -38,6 +41,9 @@ and (min-height: 415px) {
     }
     .header input:first-child:checked ~ .navigation .content .logo{
         visibility: hidden;
+    }
+    .header input:first-child:checked ~ .search {
+        z-index: 1;
     }
     .header .search input {
         width: 50%;
