@@ -88,11 +88,17 @@
     }
 
     .slider-contain .slider .text-slider img {
+        display: inline-block;
         width: 100vw;
+        margin-top: 43px;
     }
 
     .slider-contain .slider .text-slider p {
         display: none;
+    }
+
+    .slick-prev, .slick-next {
+        display: none !important;
     }
 
     .all-content .match .detail {
@@ -292,6 +298,17 @@ and (max-height: 415px) {
 
     .slider-contain .slider .text-slider p {
         font-size: 11px;
+    }
+
+    .slick-prev {
+        z-index: 1;
+        left: 15px;
+        top: 55%;
+    }
+    
+    .slick-next {
+        right: 5px;
+        top: 55%;
     }
 
     .all-content .match:first-child {

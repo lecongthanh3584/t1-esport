@@ -264,36 +264,6 @@ html {
     opacity: 0.8;
 }
 
-/* .slider-contain .slider:first-child {
-    background-image: url('/assets/slider/chicago.jpg');
-    padding-top: 50%;
-    width: 100%;
-    background-repeat: no-repeat;
-    margin-top: 46px;
-    background-size: contain;
-    position: relative;
-}
-
-.slider-contain .slider:nth-child(2) {
-    background-image: url('/assets/slider/ny.jpg');
-    padding-top: 50%;
-    width: 100%;
-    background-repeat: no-repeat;
-    margin-top: 46px;
-    background-size: contain;
-    position: relative;
-}
-
-.slider-contain .slider:last-child {
-    background-image: url('/assets/slider/la.jpg');
-    padding-top: 50%;
-    width: 100%;
-    background-repeat: no-repeat;
-    margin-top: 46px;
-    background-size: contain;
-    position: relative;
-} */
-
 .slider-contain .slider {
     position: relative;
 }
@@ -336,8 +306,19 @@ html {
     font-weight: bolder;
 }
 
+.slick-prev {
+    z-index: 1;
+    left: 30px;
+    top: 55%;
+}
+
+.slick-next {
+    right: 15px;
+    top: 55%;
+}
+
 .back-img {
-    background-image: url(https://shop-t1.gg/_dj/img/1920-33.png);
+    background: url(https://shop-t1.gg/_dj/img/1920-33.png);
     background-attachment: fixed;
 }
 

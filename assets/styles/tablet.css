@@ -81,6 +81,16 @@ and (min-height: 415px) {
     .slider-contain .slider .text-slider p {
         font-size: 10px;
     }
+    .slick-prev {
+        z-index: 1;
+        left: 10px;
+        top: 55%;
+    }
+    
+    .slick-next {
+        right: 5px;
+        top: 55%;
+    }
     .loca-form .form p {
         font-size: 18px;
     }
